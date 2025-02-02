@@ -1,0 +1,14 @@
+The solution is to ensure correct spacing around operators (+, -, *, /) within `calc()` and to carefully parenthesize nested expressions. For example, to calculate a width that's 100% minus 10 pixels, use:
+
+```css
+width: calc(100% - 10px);
+/* Correct spacing */
+```
+
+For nested expressions, ensure the order of operations is clear through the use of parentheses:
+
+```css
+width: calc( (100% - 10px) / 2 );
+/* Correctly parenthesized nested expression */
+```
+Failing to do so may result in unexpected results or parse errors. Always double-check your spacing and parentheses when using `calc()` to avoid such issues.
